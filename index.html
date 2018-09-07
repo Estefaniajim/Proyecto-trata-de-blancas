@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Proyecto de fundamentos del diseño interactivo</title>
+
+  <!-- Profesor no nos baje tantos puntos me la rife, hice una slide con un video en el, y meti imagenes padres y la invetsigacion estuvo bien, buen dia atte : Estefania  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+
+<style>
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+</style>
+
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Trafico de personas en Jalisco</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#p">Problematica</a></li>
+        <li><a href="#s"> Posibles soluciones </a></li>
+        <li><a href="#c"> Casos </a></li>
+
+
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+
+
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center grey-text text-lighten-2">La vida no es una mercancia</h1>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="http://www.amormeus.org/es/wp-content/uploads/2017/02/no-esclavos-sino-hermanos.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+      <div id="p">
+      <h4>¿Cual es el problema?</h4>
+
+        <br> Actualmente en país en donde vivimos se encuentra en los top 5 en trata de personas,  esto quiere decir que hay gente que está, a contra su voluntad, en una situación donde se ve forzada a realizar trabajos, que además son maltratados y humillados. Se les arrebata los derechos como personas y se les trata como objetos. Actualmente hay 27 millones de esclavos en el mundo, México es el lugar 18 en esclavitud por lo cual es un gran problema en nuestro país que no está siendo  tan considerad
+</br>
+
+<br>El tráfico de personas en una realidad, principalmente en regiones menos accesibles para las autoridades así como las más alejadas de la ciudad. Se señala que entre los más de 22 mil desaparecidos en Jalisco se afirma que muchos de ellos debieron, y deben, de ser utilizados en explotación laboral e incluso sexual.
+Jiménez Reynoso indica la importancia de la influencia en la familia y la educación, pues no es coincidencia que en zonas con menos disponibilidad educativa y financiera sean más propensas a sufrir de este tipo de delincuencia. Uno de los principales retos que enfrenta una posible solución es la existencia de la cultura donde es normal que el niño trabaje cuando legalmente es una acción que viola sus derechos.</br>
+
+<br>
+Según lo indica Francisco Jiménez Reynoso, investigador de la UdeG, uno de los principales problemas con la trata de personas es que no se desarrolla una investigación  ni se toman acciones de debida manera para llegar a conocer su paradero e intención de desaparición.
+
+La impunidad juega un papel sumamente importante en este tema, ya que esto impide que información vital para los procesos autoritario se lleven a cabo.
+</br>
+    </div>
+  </div>
+</div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="https://www.virtual-college.co.uk/-/media/virtual-college/courses/safeguarding-courses/trafficking-exploitation-and-modern-slavery/trafficking-exploitation-and-modern-slavery1.ashx" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+          <div id="s">
+          <h4>Propuestas de solución</h4>
+        <br>Reducir la impunidad: Realmente no podemos pedirle al gobierno que acabe con esto si no se lo permitimos, la impunidad se ha normalizado a lo largo de los años, entre otras cosas, por la falta de confianza que le tenemos a las autoridades, dejándonos influir más por el miedo de nuestra seguridad a costa de un delincuente impidiendonos hacer ejercer nuestro derechos correctamente.
+</br>
+<br> Concientizar a la comunidad e impartir una cultura segura. Educar a la gente acerca de prevenciones.
+
+Ofrecer seguridad de calidad en las comunidades que lo necesitan así como investigaciones debidas a todos los casos que lo requieran, hacer sentir a la gente segura y en confianza con las autoridades. El cambio empieza por nosotros pero no podemos hacer esto solos, necesitamos vitalmente al gobierno.
+</br>
+  </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h1 class="center white-text text-lighten-2">Hubo menos de 10 investigaciones anuales por trata de personas en Jalisco desde el inicio de la administración sexenal</h1>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="https://www.hrw.org/sites/default/files/styles/16%3A9_946x534/public/multimedia_images_2016/2016_indonesia_03.jpg?itok=xMbyJGbT" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+<h4> Casos </h4>
+    <div id="c">
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <div class="slideshow-container">
+
+
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U_kXuQHZmWs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="http://www.facenfacts.com/NewsDetails/7701/daily_img/7701_S_chained-m.jpg" style="width:78%">
+          <div class="text"><br>“No se dan cuenta que no es una vida fácil. Te pueden hasta matar los mismos clientes,
+          </br> <br> si no les gusta tu servicio te matan"
+        Pamela mexicana, secuentarda en el vaticano.</br></div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="http://www.cronica.com.mx/nimagenes/29/2015-08-31_01-08-01___7471.jpg" style="width:80%">
+          <div class="text">Karla Jacinto - Chiapas</div>
+        </div>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="index.js"></script>
+  <script src="init.js"></script>
+  <script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+
+  </body>
+</html>

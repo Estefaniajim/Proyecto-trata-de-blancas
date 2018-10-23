@@ -1,3 +1,5 @@
+<!-- Hours Estefania spend doing this webpage: first term 3 Second term:  2 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Proyecto de fundamentos del diseño interactivo</title>
 
-  <!-- Profesor no nos baje tantos puntos me la rife, hice una slide con un video en el, y meti imagenes padres y la invetsigacion estuvo bien, buen dia atte : Estefania  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
+  <link href="index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <style>
+font-family: Arial;
+}
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -26,7 +29,7 @@ p {
 }
 
 .parallax-container {
-  min-height: 380px;
+  min-height: 250px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -130,27 +133,196 @@ footer.page-footer {
   from {opacity: .4}
   to {opacity: 1}
 }
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+box-sizing: border-box;
+}
 
 
+.column {
+   float: left;
+   width: 50%;
+   padding: 10px;
+
+}
+
+
+.row:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+
+
+
+.rolldown-list {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.rolldown-list li {
+  padding: 1em;
+  margin-bottom: .125em;
+  display: block;
+  list-style: none;
+}
+
+.rolldown-list li {
+  visibility: hidden;
+  animation: rolldown .7s 1;
+  transform-origin: 50% 0;
+  animation-fill-mode: forwards;
+}
+
+.rolldown-list li:nth-child(2n) {
+  background-color: #444;
+}
+
+.rolldown-list li:nth-child(2n+1) {
+  background-color: #333;
+}
+
+#myList {
+  position: absolute;
+  width: 35%;
+  left: 35%;
+  margin-left: -40%;
+}
+
+.container {
+  position: relative;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+
+.container .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+#btnReload {
+  float: button;
+  color: #333;
+  background: #ccc;
+  border: none;
+  padding: .5em 1em;
+}
+
+#btnReload:hover {
+  background: #ddd;
+}
+
+@keyframes rolldown {
+  0% {
+    visibility: visible;
+    transform: rotateX(180deg) perspective(500px);
+  }
+  70% {
+    visibility: visible;
+    transform: rotateX(-20deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateX(0deg);
+  }
+}
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.closebtn {
+    padding-left: 10px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: #000;
+}
 </style>
 
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Trafico de personas en Jalisco</a>
+      <a id="logo-container" href="#" class="brand-logo"><font color="black">Trafico de personas en Jalisco </font></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#p">Problematica</a></li>
-        <li><a href="#s"> Posibles soluciones </a></li>
-        <li><a href="#c"> Casos </a></li>
+        <li><a href="#p">
+  <img src="https://cdn3.iconfinder.com/data/icons/the-missing-version-control-material/100/Issue_Closed-512.png" style="width:35px"></a></li>
+        <li><a href="#s">
+  <img src="http://www.myiconfinder.com/uploads/iconsets/256-256-eef893e3b8b36899212ca6271d3dca81.png" style="width:35px"></a></li>
+        <li><a href="#c">
+  <img src="https://png.pngtree.com/svg/20141216/_typical_cases_518589.png" style="width:35px"> </a></li>
 
 
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-
-
-      </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
@@ -158,9 +330,9 @@ footer.page-footer {
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
+        <br><p align="justify"><br><p align="justify">
         <h1 class="header center grey-text text-lighten-2">La vida no es una mercancia</h1>
-        <br><br>
+        <br><p align="justify"><br><p align="justify">
 
       </div>
     </div>
@@ -171,23 +343,45 @@ footer.page-footer {
   <div class="container">
     <div class="section">
       <div id="p">
-      <h4>¿Cual es el problema?</h4>
+      <center><h4>¿Cual es el problema?</center></h4>
 
-        <br> Actualmente en país en donde vivimos se encuentra en los top 5 en trata de personas,  esto quiere decir que hay gente que está, a contra su voluntad, en una situación donde se ve forzada a realizar trabajos, que además son maltratados y humillados. Se les arrebata los derechos como personas y se les trata como objetos. Actualmente hay 27 millones de esclavos en el mundo, México es el lugar 18 en esclavitud por lo cual es un gran problema en nuestro país que no está siendo  tan considerad
-</br>
+<div class="row">
+  <div class="column">
 
-<br>El tráfico de personas en una realidad, principalmente en regiones menos accesibles para las autoridades así como las más alejadas de la ciudad. Se señala que entre los más de 22 mil desaparecidos en Jalisco se afirma que muchos de ellos debieron, y deben, de ser utilizados en explotación laboral e incluso sexual.
-Jiménez Reynoso indica la importancia de la influencia en la familia y la educación, pues no es coincidencia que en zonas con menos disponibilidad educativa y financiera sean más propensas a sufrir de este tipo de delincuencia. Uno de los principales retos que enfrenta una posible solución es la existencia de la cultura donde es normal que el niño trabaje cuando legalmente es una acción que viola sus derechos.</br>
+    <p align="justify"> Actualmente en país en donde vivimos se encuentra en los top 5 en trata de personas,  esto quiere decir que hay gente que está, a contra su voluntad, en una situación donde se ve forzada a realizar trabajos, que además son maltratados y humillados. Se les arrebata los derechos como personas y se les trata como objetos. Actualmente hay 27 millones de esclavos en el mundo, México es el lugar 18 en esclavitud por lo cual es un gran problema en nuestro país que no está siendo  tan considerad</p>
+<p align="center"> <img src="https://mbtskoudsalg.com/images/mexico-png-2.png" style="width:220px">
+</p>
+  </div>
+  <div class="column">
 
-<br>
-Según lo indica Francisco Jiménez Reynoso, investigador de la UdeG, uno de los principales problemas con la trata de personas es que no se desarrolla una investigación  ni se toman acciones de debida manera para llegar a conocer su paradero e intención de desaparición.
+    <p align="justify">El tráfico de personas en una realidad, principalmente en regiones menos accesibles para las autoridades así como las más alejadas de la ciudad. Se señala que entre los más de 22 mil desaparecidos en Jalisco se afirma que muchos de ellos debieron, y deben, de ser utilizados en explotación laboral e incluso sexual.
+    Jiménez Reynoso indica la importancia
+    de la influencia en la familia y la educación, pues no es coincidencia
+    que en zonas con menos disponibilidad educativa y financiera sean más propensas a sufrir de este tipo de delincuencia.
+    Uno de los principales retos que enfrenta una posible solución es la existencia de la cultura donde es normal que el niño trabaje
+    cuando legalmente es una acción que viola sus derechos.</p>
+  </div>
+  <div class="column">
 
-La impunidad juega un papel sumamente importante en este tema, ya que esto impide que información vital para los procesos autoritario se lleven a cabo.
-</br>
-    </div>
+    <p align="justify">
+    Según lo indica Francisco Jiménez Reynoso, investigador de la UdeG, uno de los principales problemas con la trata de personas es que no se desarrolla una investigación  ni se toman acciones de debida manera para llegar a conocer su paradero e intención de desaparición.
+
+    La impunidad juega un papel sumamente importante en este tema, ya que esto impide que información vital para los procesos autoritario se lleven a cabo.
+    </p>
+    <p align="center"> <img src="https://seeklogo.com/images/G/gobierno-de-jalisco-logo-819D0CEDF2-seeklogo.com.png" style="width:120px">
+    </p>
   </div>
 </div>
 
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- It may look like that divs are not necessary but belive me, they are hahahahaha i havent sleep in 4 days. atte : Estefania  -->
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -201,35 +395,61 @@ La impunidad juega un papel sumamente importante en este tema, ya que esto impid
   <div class="container">
     <div class="section">
           <div id="s">
-          <h4>Propuestas de solución</h4>
-        <br>Reducir la impunidad: Realmente no podemos pedirle al gobierno que acabe con esto si no se lo permitimos, la impunidad se ha normalizado a lo largo de los años, entre otras cosas, por la falta de confianza que le tenemos a las autoridades, dejándonos influir más por el miedo de nuestra seguridad a costa de un delincuente impidiendonos hacer ejercer nuestro derechos correctamente.
-</br>
-<br> Concientizar a la comunidad e impartir una cultura segura. Educar a la gente acerca de prevenciones.
+          <center><h4>Propuestas de solución</center></h4>
+        <br><p align="justify">Reducir la impunidad: Realmente no podemos pedirle al gobierno que acabe con esto si no se lo permitimos, la impunidad se ha normalizado a lo largo de los años, entre otras cosas, por la falta de confianza que le tenemos a las autoridades, dejándonos influir más por el miedo de nuestra seguridad a costa de un delincuente impidiendonos hacer ejercer nuestro derechos correctamente.
+</br></p>
+<br><p align="justify"> Concientizar a la comunidad e impartir una cultura segura. Educar a la gente acerca de prevenciones.
 
 Ofrecer seguridad de calidad en las comunidades que lo necesitan así como investigaciones debidas a todos los casos que lo requieran, hacer sentir a la gente segura y en confianza con las autoridades. El cambio empieza por nosotros pero no podemos hacer esto solos, necesitamos vitalmente al gobierno.
-</br>
+</br></p>
   </div>
       </div>
+      <div class="row">
+        <div class="column" >
 
-    </div>
-  </div>
 
+<div class="card">
+  <img src="https://pbs.twimg.com/profile_images/3570902208/62d6fcc4805ed38e028a0d98bb13f57d_400x400.jpeg" alt="John" style="width:100%">
+  <h3>Maricarmen Rello</h3>
+  <p class="title">
+Jornalist at Milenio newspaper </p>
+  <p>University of Valle de Atemajac</p>
+  <div style="margin: 24px 0;">
+    <a href="https://www.linkedin.com/in/maricarmen-rello-146705161/"><i class="fa fa-twitter"></i></a>
+    <a href="https://twitter.com/mrello13"><i class="fa fa-linkedin"></i></a>
+ </div>
+</div>
+</p>
+        </div>
+        <div class="column">
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h1 class="center white-text text-lighten-2">Hubo menos de 10 investigaciones anuales por trata de personas en Jalisco desde el inicio de la administración sexenal</h1>
+          <p><iframe width="550" height="505" src="https://www.youtube.com/embed/Uv_h-WQRI3I">
+</iframe></p>
         </div>
       </div>
+
     </div>
-    <div class="parallax"><img src="https://www.hrw.org/sites/default/files/styles/16%3A9_946x534/public/multimedia_images_2016/2016_indonesia_03.jpg?itok=xMbyJGbT" alt="Unsplashed background img 3"></div>
   </div>
+
+
+
+
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><p align="justify"><br><p align="justify">
+      <h3 class="header center ow-text text-lighten-2">Hubo menos de 10 investigaciones anuales por trata de personas en Jalisco desde el inicio de la administración sexenal</h1>
+      <br><p align="justify"><br><p align="justify">
+
+    </div>
+  </div>
+  <div class="parallax"><img src="http://www.elfinanciero.com.mx/uploads/2018/07/19/654516d1b41532052383_original_std.png" alt="Unsplashed background img 1"></div>
+</div>
 
   <div class="container">
     <div class="section">
 
-<h4> Casos </h4>
+<center><h4> Casos </center></h4>
     <div id="c">
       <div class="row">
         <div class="col s12 center">
@@ -240,22 +460,37 @@ Ofrecer seguridad de calidad en las comunidades que lo necesitan así como inves
 
         <div class="mySlides fade">
           <div class="numbertext">1 / 3</div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/U_kXuQHZmWs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-        </div>
+          <div class="container">
+          <img src="https://www.eluniversal.com.mx/sites/default/files/styles/f03-651x400/public/N-C4-EU150918-1_Drupal%20Main%20Image.var_1536992259.jpg?itok=1erEjsPE" style="width="500" height="400"">
+          <div class="content">
+            <h5>Rescatan a 19 mujeres de centro nocturno</h5>
+            <p>Cerca de 17 mujeres mexicanas y 2 venezolanas eran explotadas sexualmente </p>
+            <p>13 Septiembre de 2018</p>
+          </div>
+        </div>    </div>
 
         <div class="mySlides fade">
           <div class="numbertext">2 / 3</div>
-          <img src="http://www.facenfacts.com/NewsDetails/7701/daily_img/7701_S_chained-m.jpg" style="width:78%">
-          <div class="text"><br>“No se dan cuenta que no es una vida fácil. Te pueden hasta matar los mismos clientes,
-          </br> <br> si no les gusta tu servicio te matan"
-        Pamela mexicana, secuentarda en el vaticano.</br></div>
+          <div class="container">
+          <img src="https://www.informador.mx/__export/1534650730446/sites/elinformador/img/2018/08/18/poli_crop1534650709617.jpeg_1970638775.jpeg" style="width="500" height="400"">
+          <div class="content">
+            <h5>Rescatan a 36 mujeres de centro nocturno</h5>
+            <p>Se informó que presuntamente eran obligadas a sostener relaciones sexuales con los clientes del establecimiento.</p>
+            <p>19 de Agosto de 2018</p>
+          </div>
+        </div>
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">3 / 3</div>
-          <img src="http://www.cronica.com.mx/nimagenes/29/2015-08-31_01-08-01___7471.jpg" style="width:80%">
-          <div class="text">Karla Jacinto - Chiapas</div>
+          <div class="container">
+          <img src="https://ep01.epimg.net/politica/imagenes/2017/04/26/diario_de_espana/1493226338_867672_1493226484_noticia_normal_recorte1.jpg" style="width="500" height="400"">
+          <div class="content">
+  <h5>Liberadas tres mujeres obligadas a prostituirse </h5>
+  <p>Agentes de la Policía Nacional han liberado a tres mujeres búlgaras a las que habían obligado a prostituirse en Girona y han detenido a los seis integrantes de la organización criminal</p>
+  <p> 8 de Octubre del 2018 </p>
+</div>
+</div>
         </div>
 
       <div style="text-align:center">
@@ -268,9 +503,96 @@ Ofrecer seguridad de calidad en las comunidades que lo necesitan así como inves
         </div>
       </div>
 
+
     </div>
+    <br><p align="justify">A pesar de tener cierto conocimiento del tema y estar consciente de su importancia la Fiscalía no cuenta con los datos que corresponden de la mayoría de esto, datos que deberían de haber rescatado como parte del protocolo que no fueron recaudados y no se manejan como se debería. Cualquier incidencia del grado como una desaparición humana debería tratarse con cuidado y profesionalidad. María Rita Chávez Gutiérrez, investigadora del Departamento de Desarrollo Social de la UdeG afirma que existen diversas funcionalidades con las que se manejan la trata de personas, tales como servidumbre; explotación sexual y laboral; trabajos forzados; mendicidad forzada; utilización de menores en delitos; adopción ilegal; matrimonio forzoso; tráfico de órganos, y experimentación biomédica ilícita.
+</br></p>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="https://i.ytimg.com/vi/ZzXGgo1y8Hg/maxresdefault.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
+  <div class="container">
+    <div class="section">
+      <div id="p">
+      <center><h4>Sobre el projecto </center></h4>
+
+<div class="row">
+  <div class="column">
+<h5> Proposal </h5>
+ <ul class="rolldown-list" id="myList">
+  <li>10,000 pesos por el desarrollo de la página principal</li>
+  <li>1,000 por cada cambio que se haga después o antes de la entrega si el cliente no lo había especificado antes
+</li>
+  <li>1,500 por alguna visita que hagamos al cliente o troubleshooting en la página
+</li>
+  <li>300 pesos por el dominio Mensual
+</li>
+  <li>400 pesos por mantenimiento (Siempre que sea solicitado)
+</li>
+  <li><button id="btnReload">Reload</button></p></li>
+</ul>
+
+
+
+</p>
+  </div>
+  <div class="column">
+<h5> Recursos </h5>
+    <p align="justify">David Fuentes. (2018). Tras operativo, rescatan a 19 mujeres de centro nocturno "Curazao"; hay 28 detenidos. 2018, de METRÓPOLI
+<a href=" https://www.eluniversal.com.mx/metropoli/cdmx/tras-operativo-rescatan-19-mujeres-de-centro-nocturno-curazao-hay-28-detenidos?fbclid=IwAR3VbeQSMi3w9iWCcIyKSO3F2v3WSxcquwEg7dezckHMJhO-V2n0abWcKE0">Sitio web</a></p>
+    <p align="justify">MARTA RODRÍGUEZ. (2018). Liberadas tres mujeres obligadas a prostituirse en Girona por una banda criminal. 2018, de EL PAÍS
+<a href="https://elpais.com/ccaa/2018/10/08/catalunya/1538994155_809287.html?fbclid=IwAR1tzV2KHxMiBa9Kzx7pz0vLji-kDnWnbz5AZjTNs7NoM6ZBS9pFgWThXwk">Sitio web</a>
+
+    </p>
+
+<p align="justify"> Esta pagina le debe la vida a
+  <a href="https://www.w3schools.com">w3schools.com</a>
+</p>
+  </div>
+  <div class="column">
+<h5> Integrantes </h5>
+    <p align="justify">
+      <div class="chip">
+        <img src="https://1.bp.blogspot.com/-fTxGg0crUCk/WYphwSp_qPI/AAAAAAAArA4/f-XPKcmKsLcou3iSGqhpaeBqTUH7c-EhACLcBGAs/s200/1f59c080e290ad4e.jpg" alt="Person" width="96" height="96">
+        <h9>Estefania Jimenez </h9>
+        Diseño de pagina, Codigo de pagina y Investigacion
+        <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+      </div>
+      <div class="chip">
+  <img src="https://vignette.wikia.nocookie.net/leagueoflegends/images/a/ae/Urf_Kench_profileicon.png/revision/latest?cb=20170504230216" alt="Person" width="96" height="96">
+  <h9>Erick Eduardo </h9>
+  Investigacion
+  <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+</div>
+
+    </p>
+    </p>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="index.js"></script>
   <script src="init.js"></script>
@@ -301,7 +623,22 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+// Increments the delay on each item.
+$('.rolldown-list li').each(function () {
+  var delay = ($(this).index() / 4) + 's';
+  $(this).css({
+    webkitAnimationDelay: delay,
+    mozAnimationDelay: delay,
+    animationDelay: delay
+  });
+});
 
+$('#btnReload').click(function () {
+  $('#myList').removeClass('rolldown-list');
+  setTimeout(function () {
+    $('#myList').addClass('rolldown-list');
+  }, 1);
+});
 </script>
 
   </body>

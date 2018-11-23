@@ -1,306 +1,336 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Proyecto de fundamentos del diseño interactivo</title>
 
 
-  <link href="index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="index.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <style>
-
-
-div.gallery {
+  div.gallery {
     margin: 5px;
     border: 1px solid #ccc;
     width: 140px;
-}
+  }
 
-div.gallery:hover {
+  div.gallery:hover {
     border: 1px solid #777;
-}
+  }
 
-div.gallery img {
+  div.gallery img {
     width: 100%;
     height: auto;
-}
+  }
 
-div.desc {
+  div.desc {
     padding: 15px;
     text-align: center;
-}
+  }
 
-font-family: Arial;
-}
-nav ul a,
-nav .brand-logo {
-  color: #444;
-}
+  font-family: Arial;
+  }
 
-p {
-  line-height: 2rem;
-}
+  nav ul a,
+  nav .brand-logo {
+    color: #444;
+  }
 
-.sidenav-trigger {
-  color: #26a69a;
-}
+  p {
+    line-height: 2rem;
+  }
 
-.parallax-container {
-  min-height: 250px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
+  .sidenav-trigger {
+    color: #26a69a;
+  }
+
+  .parallax-container {
+    min-height: 250px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255, 255, 255, .9);
+  }
+
   .parallax-container .section {
     width: 100%;
   }
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
+  @media only screen and (max-width : 992px) {
+    .parallax-container .section {
+      position: absolute;
+      top: 40%;
+    }
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
+    #index-banner .section {
+      top: 10%;
+    }
+  }
+
+  @media only screen and (max-width : 600px) {
+    #index-banner .section {
+      top: 0;
+    }
+  }
+
+  .icon-block {
+    padding: 0 15px;
+  }
+
+  .icon-block .material-icons {
+    font-size: inherit;
+  }
+
+  footer.page-footer {
+    margin: 0;
+  }
+
+
+
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .text {
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
     top: 0;
   }
-}
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
 
-footer.page-footer {
-  margin: 0;
-}
-
-
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
 
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
 
-.text {
-  color: white;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 30px;
-  width: 100%;
-  text-align: center;
-}
+  @-webkit-keyframes fade {
+    from {
+      opacity: .4
+    }
 
+    to {
+      opacity: 1
+    }
+  }
 
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
 
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+    to {
+      opacity: 1
+    }
+  }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-.column {
+  .column {
     float: left;
     width: 33.33%;
     padding: 15px;
-}
+  }
 
-/* Clear floats after the columns */
-.row:after {
+  /* Clear floats after the columns */
+  .row:after {
     content: "";
     display: table;
     clear: both;
-}
-
-box-sizing: border-box;
-}
-
-
-.column {
-   float: left;
-   width: 50%;
-   padding: 10px;
-
-}
-
-
-.row:after {
-   content: "";
-   display: table;
-   clear: both;
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover, a:hover {
-  opacity: 0.7;
-}
-
-
-
-
-.rolldown-list {
-  text-align: left;
-  padding: 0;
-  margin: 0;
-}
-
-.rolldown-list li {
-  padding: 1em;
-  margin-bottom: .125em;
-  display: block;
-  list-style: none;
-}
-
-.rolldown-list li {
-  visibility: hidden;
-  animation: rolldown .7s 1;
-  transform-origin: 50% 0;
-  animation-fill-mode: forwards;
-}
-
-.rolldown-list li:nth-child(2n) {
-  background-color: #444;
-}
-
-.rolldown-list li:nth-child(2n+1) {
-  background-color: #333;
-}
-
-#myList {
-  position: absolute;
-  width: 35%;
-  left: 35%;
-  margin-left: -40%;
-  color: #DBDBDB;
-}
-
-.container {
-  position: relative;
-  max-width: 800px; /* Maximum width */
-  margin: 0 auto; /* Center it */
-}
-
-.container .content {
-  position: absolute; /* Position the background text */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* Full width */
-  padding: 20px; /* Some padding */
-}
-#btnReload {
-  float: button;
-  color: #333;
-  background: #ccc;
-  border: none;
-  padding: .5em 1em;
-}
-
-#btnReload:hover {
-  background: #ddd;
-}
-
-@keyframes rolldown {
-  0% {
-    visibility: visible;
-    transform: rotateX(180deg) perspective(500px);
   }
-  70% {
-    visibility: visible;
-    transform: rotateX(-20deg);
+
+  box-sizing: border-box;
   }
-  100% {
-    visibility: visible;
-    transform: rotateX(0deg);
+
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+
   }
-}
-.chip {
+
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+
+  button:hover,
+  a:hover {
+    opacity: 0.7;
+  }
+
+
+
+
+  .rolldown-list {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  .rolldown-list li {
+    padding: 1em;
+    margin-bottom: .125em;
+    display: block;
+    list-style: none;
+  }
+
+  .rolldown-list li {
+    visibility: hidden;
+    animation: rolldown .7s 1;
+    transform-origin: 50% 0;
+    animation-fill-mode: forwards;
+  }
+
+  .rolldown-list li:nth-child(2n) {
+    background-color: #444;
+  }
+
+  .rolldown-list li:nth-child(2n+1) {
+    background-color: #333;
+  }
+
+  #myList {
+    position: absolute;
+    width: 35%;
+    left: 35%;
+    margin-left: -40%;
+    color: #DBDBDB;
+  }
+
+  .container {
+    position: relative;
+    max-width: 800px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center it */
+  }
+
+  .container .content {
+    position: absolute;
+    /* Position the background text */
+    bottom: 0;
+    /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    /* Grey text */
+    width: 100%;
+    /* Full width */
+    padding: 20px;
+    /* Some padding */
+  }
+
+  #btnReload {
+    float: button;
+    color: #333;
+    background: #ccc;
+    border: none;
+    padding: .5em 1em;
+  }
+
+  #btnReload:hover {
+    background: #ddd;
+  }
+
+  @keyframes rolldown {
+    0% {
+      visibility: visible;
+      transform: rotateX(180deg) perspective(500px);
+    }
+
+    70% {
+      visibility: visible;
+      transform: rotateX(-20deg);
+    }
+
+    100% {
+      visibility: visible;
+      transform: rotateX(0deg);
+    }
+  }
+
+  .chip {
     display: inline-block;
     padding: 0 25px;
     height: 50px;
@@ -308,53 +338,59 @@ button:hover, a:hover {
     line-height: 50px;
     border-radius: 25px;
     background-color: #f1f1f1;
-}
+  }
 
-.chip img {
+  .chip img {
     float: left;
     margin: 0 10px 0 -25px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
-}
+  }
 
-.closebtn {
+  .closebtn {
     padding-left: 10px;
     color: #888;
     font-weight: bold;
     float: right;
     font-size: 20px;
     cursor: pointer;
-}
+  }
 
-.closebtn:hover {
+  .closebtn:hover {
     color: #000;
-}
+  }
 </style>
 
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><font color="black">Trafico de personas en Jalisco </font></a>
+      <a id="logo-container" href="#" class="brand-logo">
+        <font color="black">Trafico de personas en Jalisco </font>
+      </a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#p">
-  <img src="https://cdn3.iconfinder.com/data/icons/the-missing-version-control-material/100/Issue_Closed-512.png" style="width:35px"></a></li>
+            <img src="https://cdn3.iconfinder.com/data/icons/the-missing-version-control-material/100/Issue_Closed-512.png" style="width:35px"></a></li>
         <li><a href="#s">
-  <img src="http://www.myiconfinder.com/uploads/iconsets/256-256-eef893e3b8b36899212ca6271d3dca81.png" style="width:35px"></a></li>
+            <img src="http://www.myiconfinder.com/uploads/iconsets/256-256-eef893e3b8b36899212ca6271d3dca81.png" style="width:35px"></a></li>
         <li><a href="#c">
-  <img src="https://png.pngtree.com/svg/20141216/_typical_cases_518589.png" style="width:35px"> </a></li>
+            <img src="https://png.pngtree.com/svg/20141216/_typical_cases_518589.png" style="width:35px"> </a></li>
 
 
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><p align="justify"><br><p align="justify">
-        <h1 class="header center grey-text text-lighten-2">La vida no es una mercancia</h1>
-        <br><p align="justify"><br><p align="justify">
+        <br>
+        <p align="justify"><br>
+          <p align="justify">
+            <h1 class="header center grey-text text-lighten-2">La vida no es una mercancia</h1>
+            <br>
+            <p align="justify"><br>
+              <p align="justify">
 
       </div>
     </div>
@@ -365,179 +401,187 @@ button:hover, a:hover {
   <div class="container">
     <div class="section">
       <div id="p">
-      <center><h4>¿Cual es el problema?</center></h4>
+        <center>
+          <h4>¿Cual es el problema?
+        </center>
+        </h4>
 
-<div class="row">
-  <div class="column">
+        <div class="row">
+          <div class="column">
 
-    <p align="justify"> Actualmente en país en donde vivimos se encuentra en los top 5 en trata de personas,  esto quiere decir que hay gente que está, a contra su voluntad, en una situación donde se ve forzada a realizar trabajos, que además son maltratados y humillados. Se les arrebata los derechos como personas y se les trata como objetos. Actualmente hay 27 millones de esclavos en el mundo, México es el lugar 18 en esclavitud por lo cual es un gran problema en nuestro país que no está siendo  tan considerad</p>
-<p align="center"> <img src="https://mbtskoudsalg.com/images/mexico-png-2.png" style="width:220px">
-</p>
-  </div>
-  <div class="column">
+            <p align="justify"> Actualmente en país en donde vivimos se encuentra en los top 5 en trata de personas, esto quiere decir que hay gente que está, a contra su voluntad, en una situación donde se ve forzada a realizar trabajos, que además
+              son maltratados y humillados. Se les arrebata los derechos como personas y se les trata como objetos. Actualmente hay 27 millones de esclavos en el mundo, México es el lugar 18 en esclavitud por lo cual es un gran problema en nuestro
+              país que no está siendo tan considerad</p>
+            <p align="center"> <img src="https://mbtskoudsalg.com/images/mexico-png-2.png" style="width:220px">
+            </p>
+          </div>
+          <div class="column">
 
-    <p align="justify">El tráfico de personas en una realidad, principalmente en regiones menos accesibles para las autoridades así como las más alejadas de la ciudad. Se señala que entre los más de 22 mil desaparecidos en Jalisco se afirma que muchos de ellos debieron, y deben, de ser utilizados en explotación laboral e incluso sexual.
-    Jiménez Reynoso indica la importancia
-    de la influencia en la familia y la educación, pues no es coincidencia
-    que en zonas con menos disponibilidad educativa y financiera sean más propensas a sufrir de este tipo de delincuencia.
-    Uno de los principales retos que enfrenta una posible solución es la existencia de la cultura donde es normal que el niño trabaje
-    cuando legalmente es una acción que viola sus derechos.</p>
-  </div>
-  <div class="column">
+            <p align="justify">El tráfico de personas en una realidad, principalmente en regiones menos accesibles para las autoridades así como las más alejadas de la ciudad. Se señala que entre los más de 22 mil desaparecidos en Jalisco se afirma
+              que muchos de ellos debieron, y deben, de ser utilizados en explotación laboral e incluso sexual.
+              Jiménez Reynoso indica la importancia
+              de la influencia en la familia y la educación, pues no es coincidencia
+              que en zonas con menos disponibilidad educativa y financiera sean más propensas a sufrir de este tipo de delincuencia.
+              Uno de los principales retos que enfrenta una posible solución es la existencia de la cultura donde es normal que el niño trabaje
+              cuando legalmente es una acción que viola sus derechos.</p>
+          </div>
+          <div class="column">
 
-    <p align="justify">
-    Según lo indica Francisco Jiménez Reynoso, investigador de la UdeG, uno de los principales problemas con la trata de personas es que no se desarrolla una investigación  ni se toman acciones de debida manera para llegar a conocer su paradero e intención de desaparición.
+            <p align="justify">
+              Según lo indica Francisco Jiménez Reynoso, investigador de la UdeG, uno de los principales problemas con la trata de personas es que no se desarrolla una investigación ni se toman acciones de debida manera para llegar a conocer su
+              paradero e intención de desaparición.
 
-    La impunidad juega un papel sumamente importante en este tema, ya que esto impide que información vital para los procesos autoritario se lleven a cabo.
-    </p>
-    <p align="center"> <img src="https://seeklogo.com/images/G/gobierno-de-jalisco-logo-819D0CEDF2-seeklogo.com.png" style="width:120px">
-    </p>
-  </div>
-</div>
-
-
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- It may look like that divs are not necessary but belive me, they are hahahahaha i havent sleep in 4 days. atte : Estefania  -->
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
+              La impunidad juega un papel sumamente importante en este tema, ya que esto impide que información vital para los procesos autoritario se lleven a cabo.
+            </p>
+            <p align="center"> <img src="https://seeklogo.com/images/G/gobierno-de-jalisco-logo-819D0CEDF2-seeklogo.com.png" style="width:120px">
+            </p>
+          </div>
         </div>
+
+
       </div>
+
     </div>
+  </div>
+  <!-- It may look like that divs are not necessary but belive me, they are hahahahaha i havent sleep in 4 days. atte : Estefania  -->
+  <div class="parallax-container valign-wrapper">
     <div class="parallax"><img src="https://www.virtual-college.co.uk/-/media/virtual-college/courses/safeguarding-courses/trafficking-exploitation-and-modern-slavery/trafficking-exploitation-and-modern-slavery1.ashx" alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
     <div class="section">
-          <div id="s">
-          <center><h4>Propuestas de solución</center></h4>
-        <br><p align="justify">Reducir la impunidad: Realmente no podemos pedirle al gobierno que acabe con esto si no se lo permitimos, la impunidad se ha normalizado a lo largo de los años, entre otras cosas, por la falta de confianza que le tenemos a las autoridades, dejándonos influir más por el miedo de nuestra seguridad a costa de un delincuente impidiendonos hacer ejercer nuestro derechos correctamente.
-</br></p>
-<br><p align="justify"> Concientizar a la comunidad e impartir una cultura segura. Educar a la gente acerca de prevenciones.
+      <div id="s">
+        <center>
+          <h4>Propuestas de solución
+        </center>
+        </h4>
+        <br>
+        <p align="justify">Reducir la impunidad: Realmente no podemos pedirle al gobierno que acabe con esto si no se lo permitimos, la impunidad se ha normalizado a lo largo de los años, entre otras cosas, por la falta de confianza que le tenemos a
+          las autoridades, dejándonos influir más por el miedo de nuestra seguridad a costa de un delincuente impidiendonos hacer ejercer nuestro derechos correctamente.
+          </br></p>
+        <br>
+        <p align="justify"> Concientizar a la comunidad e impartir una cultura segura. Educar a la gente acerca de prevenciones.
 
-Ofrecer seguridad de calidad en las comunidades que lo necesitan así como investigaciones debidas a todos los casos que lo requieran, hacer sentir a la gente segura y en confianza con las autoridades. El cambio empieza por nosotros pero no podemos hacer esto solos, necesitamos vitalmente al gobierno.
-</br></p>
-  </div>
+          Ofrecer seguridad de calidad en las comunidades que lo necesitan así como investigaciones debidas a todos los casos que lo requieran, hacer sentir a la gente segura y en confianza con las autoridades. El cambio empieza por nosotros pero no
+          podemos hacer esto solos, necesitamos vitalmente al gobierno.
+          </br></p>
       </div>
-      <div class="row">
-        <div class="column" >
-
-
-<div class="card">
-  <img src="https://pbs.twimg.com/profile_images/3570902208/62d6fcc4805ed38e028a0d98bb13f57d_400x400.jpeg" alt="John" style="width:100%">
-  <h3>Maricarmen Rello</h3>
-  <p class="title">
-Jornalist at Milenio newspaper </p>
-  <p>University of Valle de Atemajac</p>
-  <div style="margin: 24px 0;">
-    <a href="https://twitter.com/mrello13"><i class="fa fa-twitter"></i></a>
-    <a href="
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="https://pbs.twimg.com/profile_images/3570902208/62d6fcc4805ed38e028a0d98bb13f57d_400x400.jpeg" alt="John" style="width:100%">
+          <h3>Maricarmen Rello</h3>
+          <p class="title">
+            Jornalist at Milenio newspaper </p>
+          <p>University of Valle de Atemajac</p>
+          <div style="margin: 24px 0;">
+            <a href="https://twitter.com/mrello13"><i class="fa fa-twitter"></i></a>
+            <a href="
     https://www.linkedin.com/in/maricarmen-rello-146705161/"><i class="fa fa-linkedin"></i></a>
- </div>
-</div>
-</p>
+          </div>
         </div>
-        <div class="column">
-
-          <p><iframe width="550" height="505" src="https://www.youtube.com/embed/Uv_h-WQRI3I">
-</iframe></p>
-        </div>
+        </p>
       </div>
-
+      <div class="column">
+        <p><iframe width="550" height="505" src="https://www.youtube.com/embed/Uv_h-WQRI3I">
+          </iframe></p>
+      </div>
     </div>
   </div>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br>
+        <p align="justify"><br>
+          <p align="justify">
+            <h3 class="header center ow-text text-lighten-2">Hubo menos de 10 investigaciones anuales por trata de personas en Jalisco desde el inicio de la administración sexenal</h1>
+              <br>
+              <p align="justify"><br>
+                <p align="justify">
 
-
-
-
-<div id="index-banner" class="parallax-container">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <br><p align="justify"><br><p align="justify">
-      <h3 class="header center ow-text text-lighten-2">Hubo menos de 10 investigaciones anuales por trata de personas en Jalisco desde el inicio de la administración sexenal</h1>
-      <br><p align="justify"><br><p align="justify">
-
+      </div>
     </div>
+    <div class="parallax"><img src="http://www.elfinanciero.com.mx/uploads/2018/07/19/654516d1b41532052383_original_std.png" alt="Unsplashed background img 1"></div>
   </div>
-  <div class="parallax"><img src="http://www.elfinanciero.com.mx/uploads/2018/07/19/654516d1b41532052383_original_std.png" alt="Unsplashed background img 1"></div>
-</div>
 
   <div class="container">
     <div class="section">
 
-<center><h4> Casos </center></h4>
-    <div id="c">
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <div class="slideshow-container">
+      <center>
+        <h4> Casos
+      </center>
+      </h4>
+      <div id="c">
+        <div class="row">
+          <div class="col s12 center">
+            <h3><i class="mdi-content-send brown-text"></i></h3>
+            <div class="slideshow-container">
 
 
 
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <div class="container">
-          <img src="https://www.eluniversal.com.mx/sites/default/files/styles/f03-651x400/public/N-C4-EU150918-1_Drupal%20Main%20Image.var_1536992259.jpg?itok=1erEjsPE" style="width="500" height="400"">
-          <div class="content">
-            <h5>Rescatan a 19 mujeres de centro nocturno</h5>
-            <p>Cerca de 17 mujeres mexicanas y 2 venezolanas eran explotadas sexualmente </p>
-            <p>13 Septiembre de 2018</p>
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <div class="container">
+                  <img src="https://www.eluniversal.com.mx/sites/default/files/styles/f03-651x400/public/N-C4-EU150918-1_Drupal%20Main%20Image.var_1536992259.jpg?itok=1erEjsPE" style="width=" 500" height="400"">
+          <div class=" content">
+                  <h5>Rescatan a 19 mujeres de centro nocturno</h5>
+                  <p>Cerca de 17 mujeres mexicanas y 2 venezolanas eran explotadas sexualmente </p>
+                  <p>13 Septiembre de 2018</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <div class="container">
+                <img src="https://www.informador.mx/__export/1534650730446/sites/elinformador/img/2018/08/18/poli_crop1534650709617.jpeg_1970638775.jpeg" style="width=" 500" height="400"">
+          <div class=" content">
+                <h5>Rescatan a 36 mujeres de centro nocturno</h5>
+                <p>Se informó que presuntamente eran obligadas a sostener relaciones sexuales con los clientes del establecimiento.</p>
+                <p>19 de Agosto de 2018</p>
+              </div>
+            </div>
           </div>
-        </div>    </div>
 
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <div class="container">
-          <img src="https://www.informador.mx/__export/1534650730446/sites/elinformador/img/2018/08/18/poli_crop1534650709617.jpeg_1970638775.jpeg" style="width="500" height="400"">
-          <div class="content">
-            <h5>Rescatan a 36 mujeres de centro nocturno</h5>
-            <p>Se informó que presuntamente eran obligadas a sostener relaciones sexuales con los clientes del establecimiento.</p>
-            <p>19 de Agosto de 2018</p>
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <div class="container">
+              <img src="https://ep01.epimg.net/politica/imagenes/2017/04/26/diario_de_espana/1493226338_867672_1493226484_noticia_normal_recorte1.jpg" style="width=" 500" height="400"">
+          <div class=" content">
+              <h5>Liberadas tres mujeres obligadas a prostituirse </h5>
+              <p>Agentes de la Policía Nacional han liberado a tres mujeres búlgaras a las que habían obligado a prostituirse en Girona y han detenido a los seis integrantes de la organización criminal</p>
+              <p> 8 de Octubre del 2018 </p>
+            </div>
           </div>
         </div>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
 
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <div class="container">
-          <img src="https://ep01.epimg.net/politica/imagenes/2017/04/26/diario_de_espana/1493226338_867672_1493226484_noticia_normal_recorte1.jpg" style="width="500" height="400"">
-          <div class="content">
-  <h5>Liberadas tres mujeres obligadas a prostituirse </h5>
-  <p>Agentes de la Policía Nacional han liberado a tres mujeres búlgaras a las que habían obligado a prostituirse en Girona y han detenido a los seis integrantes de la organización criminal</p>
-  <p> 8 de Octubre del 2018 </p>
-</div>
-</div>
-        </div>
 
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
-
-
-        </div>
-      </div>
-
-
     </div>
-    <br><p align="justify">A pesar de tener cierto conocimiento del tema y estar consciente de su importancia la Fiscalía no cuenta con los datos que corresponden de la mayoría de esto, datos que deberían de haber rescatado como parte del protocolo que no fueron recaudados y no se manejan como se debería. Cualquier incidencia del grado como una desaparición humana debería tratarse con cuidado y profesionalidad. María Rita Chávez Gutiérrez, investigadora del Departamento de Desarrollo Social de la UdeG afirma que existen diversas funcionalidades con las que se manejan la trata de personas, tales como servidumbre; explotación sexual y laboral; trabajos forzados; mendicidad forzada; utilización de menores en delitos; adopción ilegal; matrimonio forzoso; tráfico de órganos, y experimentación biomédica ilícita.
-</br></p>
-  </div>
-</div>
 
-</div>
-</div>
-</div>
-</div>
-</div>
+
+  </div>
+  <br>
+  <p align="justify">A pesar de tener cierto conocimiento del tema y estar consciente de su importancia la Fiscalía no cuenta con los datos que corresponden de la mayoría de esto, datos que deberían de haber rescatado como parte del protocolo que no
+    fueron recaudados y no se manejan como se debería. Cualquier incidencia del grado como una desaparición humana debería tratarse con cuidado y profesionalidad. María Rita Chávez Gutiérrez, investigadora del Departamento de Desarrollo Social de la
+    UdeG afirma que existen diversas funcionalidades con las que se manejan la trata de personas, tales como servidumbre; explotación sexual y laboral; trabajos forzados; mendicidad forzada; utilización de menores en delitos; adopción ilegal;
+    matrimonio forzoso; tráfico de órganos, y experimentación biomédica ilícita.
+    </br></p>
+  </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -552,136 +596,175 @@ Jornalist at Milenio newspaper </p>
   <div class="container">
     <div class="section">
       <div id="p">
-      <center><h4>Sobre el projecto </center></h4>
+        <center>
+          <h4>Sobre el projecto
+        </center>
+        </h4>
 
-<div class="row">
-  <div class="column">
-<h5><a href="https://docs.google.com/document/d/1ZmgK22p5yeZYClkcjKcD_4L6JUNOfdzOztYgIB-LvJc/edit?usp=sharing">Proposal</a> </h5>
- <ul class="rolldown-list" id="myList">
-  <li>10,000 pesos por el desarrollo de la página principal</li>
-  <li>1,000 por cada cambio que se haga después o antes de la entrega si el cliente no lo había especificado antes
-</li>
-  <li>1,500 por alguna visita que hagamos al cliente o troubleshooting en la página
-</li>
-  <li>300 pesos por el dominio Mensual y 400 pesos por mantenimiento (Siempre que sea solicitado)
-</li>
-  <li><button id="btnReload">Reload</button></p></li>
-</ul>
-
-
-
-</p>
-  </div>
-  <div class="column">
-<h5> Recursos </h5>
-    <p align="justify">David Fuentes. (2018). Tras operativo, rescatan a 19 mujeres de centro nocturno "Curazao"; hay 28 detenidos. 2018, de METRÓPOLI
-<a href=" https://www.eluniversal.com.mx/metropoli/cdmx/tras-operativo-rescatan-19-mujeres-de-centro-nocturno-curazao-hay-28-detenidos?fbclid=IwAR3VbeQSMi3w9iWCcIyKSO3F2v3WSxcquwEg7dezckHMJhO-V2n0abWcKE0">Sitio web</a></p>
-    <p align="justify">MARTA RODRÍGUEZ. (2018). Liberadas tres mujeres obligadas a prostituirse en Girona por una banda criminal. 2018, de EL PAÍS
-<a href="https://elpais.com/ccaa/2018/10/08/catalunya/1538994155_809287.html?fbclid=IwAR1tzV2KHxMiBa9Kzx7pz0vLji-kDnWnbz5AZjTNs7NoM6ZBS9pFgWThXwk">Sitio web</a>
-
-    </p>
-
-<p align="justify"> Esta pagina le debe la vida a
-  <a href="https://www.w3schools.com">w3schools.com</a>
-</p>
-  </div>
-  <div class="column">
-<h5> Integrantes </h5>
-    <p align="justify">
-      <div class="chip">
-        <img src="https://1.bp.blogspot.com/-fTxGg0crUCk/WYphwSp_qPI/AAAAAAAArA4/f-XPKcmKsLcou3iSGqhpaeBqTUH7c-EhACLcBGAs/s200/1f59c080e290ad4e.jpg" alt="Person" width="96" height="96">
-        <h9>Estefania Jimenez </h9>
-        Diseño de pagina, Codigo de pagina y Investigacion
-        <span class= onclick="this.parentElement.style.display='none'"></span>
-      </div>
-      <div class="chip">
-  <img src="https://vignette.wikia.nocookie.net/leagueoflegends/images/a/ae/Urf_Kench_profileicon.png/revision/latest?cb=20170504230216" alt="Person" width="96" height="96">
-  <h9>Erick Eduardo </h9>
-  Investigacion
-  <span class= onclick="this.parentElement.style.display='none'"></span>
-</div>
-
-    </p>
-    </p>
-  </div>
-</div>
+        <div class="row">
+          <div class="column">
+            <h5><a href="https://docs.google.com/document/d/1ZmgK22p5yeZYClkcjKcD_4L6JUNOfdzOztYgIB-LvJc/edit?usp=sharing">Proposal</a> </h5>
+            <ul class="rolldown-list" id="myList">
+              <li>10,000 pesos por el desarrollo de la página principal</li>
+              <li>1,000 por cada cambio que se haga después o antes de la entrega si el cliente no lo había especificado antes
+              </li>
+              <li>1,500 por alguna visita que hagamos al cliente o troubleshooting en la página
+              </li>
+              <li>300 pesos por el dominio Mensual y 400 pesos por mantenimiento (Siempre que sea solicitado)
+              </li>
+              <li><button id="btnReload">Reload</button></p>
+              </li>
+            </ul>
 
 
-</div>
 
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>  </div>
-<div class="parallax-container valign-wrapper">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <div class="row center">
-      </div>
-    </div>
-  </div>
-  <div class="parallax"><img src="https://i.ytimg.com/vi/ZzXGgo1y8Hg/maxresdefault.jpg" alt="Unsplashed background img 2"></div>
-</div>
+            </p>
+          </div>
+          <div class="column">
+            <h5> Recursos </h5>
+            <p align="justify">David Fuentes. (2018). Tras operativo, rescatan a 19 mujeres de centro nocturno "Curazao"; hay 28 detenidos. 2018, de METRÓPOLI
+              <a href=" https://www.eluniversal.com.mx/metropoli/cdmx/tras-operativo-rescatan-19-mujeres-de-centro-nocturno-curazao-hay-28-detenidos?fbclid=IwAR3VbeQSMi3w9iWCcIyKSO3F2v3WSxcquwEg7dezckHMJhO-V2n0abWcKE0">Sitio web</a></p>
+            <p align="justify">MARTA RODRÍGUEZ. (2018). Liberadas tres mujeres obligadas a prostituirse en Girona por una banda criminal. 2018, de EL PAÍS
+              <a href="https://elpais.com/ccaa/2018/10/08/catalunya/1538994155_809287.html?fbclid=IwAR1tzV2KHxMiBa9Kzx7pz0vLji-kDnWnbz5AZjTNs7NoM6ZBS9pFgWThXwk">Sitio web</a>
 
-<div class="container">
-  <div class="section">
-    <div id="p">
-    <center><h4> <a href="https://docs.google.com/document/d/1LBk0qOvVQ5mi1QjZJJkLPpIU3JuqO2-8KWYnulsyqck/edit?usp=sharing"> Prototipo </a></center></h4>
+            </p>
 
-
-    <div class="row">
-    <div class="column">
-      <p><div class="gallery">
-    <img src="https://imageshack.com/a/img923/1359/ppsZU1.png" style="width:120px">
-  </a>
-  <div class="desc">Vista frontal, podemos ver el sensor tactil el cual activa el diapositivo</div>
-</div>
-
-
-<div class="gallery">
-    <img src="https://imageshack.com/a/img923/6237/Lh3Hqy.png" style="width:120px">
-  </a>
-  <div class="desc">Vista lateral, podemos visualizar el boton para supender y el boton de emergencia por si llega a fallar el sensor tactil.</div>
-</div>
-
-<div class="gallery">
-    <img src="https://imageshack.com/a/img922/1948/cucKLy.png" style="width:120px">
-  </a>
-  <div class="desc">Aqui podemos ver  como se veria puesto </div>
-</div>
-</p>
-    </div>
-    <div class="column"><p><h6>Impacto:</h6>Este dispositivo, si se llega a producir de manera  eficiente y las autoridades colaboran fácilmente podría ser accesible para todos, limitado un poco por el precio, para evitar los peores riesgos, el avisar a las autoridades como un “botón de pánico” permite que las personas viajen y se sientan más seguras, conociendo esta medida de seguridad las personas que trabajan en la trata de personas tendrán un trabajo muchísimo más complicado si es que estos no quieren ser atrapados. Con un buen manejo del dispositivo  este puede disminuir la tasa de incidentes relacionados con secuestros en la localidad, no siendo una solución absoluta pero sí una buena alternativa.
-</p></div>
-    <div class="column"><p>
-<h6>Retroalimentación de la experta: </h6> El producto parece tener una muy buena eficiencia, sin embargo existe la posibilidad de que el usuario active la alarma de pánico de manera accidental e incluso no darse cuenta después de ello, les recomiendo poner un botón, o una serie de combinaciones con los botones que ya se tiene, para poder apagar la alarma y que a su vez esta emita un sonido medianamente fuerte o una vibración para que el usuario esté consciente de que este ha sido activado. Esto evitando molestias y a su vez inconvenientes con las autoridades a causa de este dispositivo.
-</p>
-<p><h6>Retroalimentación de usuario: </h6>El aparato se ve muy confiable, me parece muy interesante, a un precio accesible estaría dispuesto a adquirir uno e incluso recomendarlo ¿Cuáles serán las medidas exactas del dispositivo? Tengo el pendiente de que este se me pueda perder
- </p></div>
-  </div>
-  </div>
-  </div>
-  </div>
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
+            <p align="justify"> Esta pagina le debe la vida a
+              <a href="https://www.w3schools.com">w3schools.com</a>
+            </p>
+          </div>
+          <div class="column">
+            <h5> Integrantes </h5>
+            <p align="justify">
+              <div class="chip">
+                <img src="https://1.bp.blogspot.com/-fTxGg0crUCk/WYphwSp_qPI/AAAAAAAArA4/f-XPKcmKsLcou3iSGqhpaeBqTUH7c-EhACLcBGAs/s200/1f59c080e290ad4e.jpg" alt="Person" width="96" height="96">
+                <h9>Estefania Jimenez </h9>
+                Diseño de pagina, Codigo de pagina y Investigacion
+                <span class=onclick="this.parentElement.style.display='none'"></span>
+              </div>
+              <div class="chip">
+                <img src="https://vignette.wikia.nocookie.net/leagueoflegends/images/a/ae/Urf_Kench_profileicon.png/revision/latest?cb=20170504230216" alt="Person" width="96" height="96">
+                <h9>Erick Eduardo </h9>
+                Investigacion
+                <span class=onclick="this.parentElement.style.display='none'"></span>
+              </div>
+            </p>
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="parallax-container valign-wrapper">
+    <div class="parallax"><img src="https://i.ytimg.com/vi/ZzXGgo1y8Hg/maxresdefault.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <center>
+        <a href="https://docs.google.com/document/d/1LBk0qOvVQ5mi1QjZJJkLPpIU3JuqO2-8KWYnulsyqck/edit?usp=sharing"><h4> Prototipo</h4> </a>
+      </center>
+      <div class="row">
+        <div class="column">
+          <p>
+            <div class="gallery">
+              <img src="https://imageshack.com/a/img923/1359/ppsZU1.png" style="width:120px">
+              </a>
+              <div class="desc">Vista frontal, podemos ver el sensor tactil el cual activa el diapositivo</div>
+            </div>
+
+
+            <div class="gallery">
+              <img src="https://imageshack.com/a/img923/6237/Lh3Hqy.png" style="width:120px">
+              </a>
+              <div class="desc">Vista lateral, podemos visualizar el boton para supender y el boton de emergencia por si llega a fallar el sensor tactil.</div>
+            </div>
+
+            <div class="gallery">
+              <img src="https://imageshack.com/a/img922/1948/cucKLy.png" style="width:120px">
+              </a>
+              <div class="desc">Aqui podemos ver como se veria puesto </div>
+            </div>
+          </p>
+        </div>
+        <div class="column">
+          <p>
+            <h5>Impacto:</h5>Este dispositivo, si se llega a producir de manera eficiente y las autoridades colaboran fácilmente podría ser accesible para todos, limitado un poco por el precio, para evitar los peores riesgos, el avisar a las
+            autoridades como un “botón de pánico” permite que las personas viajen y se sientan más seguras, conociendo esta medida de seguridad las personas que trabajan en la trata de personas tendrán un trabajo muchísimo más complicado si es que
+            estos no quieren ser atrapados. Con un buen manejo del dispositivo este puede disminuir la tasa de incidentes relacionados con secuestros en la localidad, no siendo una solución absoluta pero sí una buena alternativa.
+          </p>
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Codigo</span>
+              <p>int sensor_mov = 1;
+                int sensor_tact = 2;
+                int bootton_1 = 3;
+                int bootton_2 = 4;
+                int x = 0;
+                int y = 0;
+                int GPS = 5;
+
+                void setup() {
+                pinMode(1, INPUT);
+                pinMode(2, INPUT);
+                pinMode(3, INPUT);
+                pinMode(4, INPUT);
+                pinMode(5, OUTPUT);
+                }
+
+                void loop() {
+                x=y%2
+                if (x != 0) {
+                digitalWrite(GPS, LOW);
+                }
+                else {
+                if (digitalRead(sensor_mov) == HIGH) {
+                x=0;
+                }
+                if (digitalRead(sensor_tact) == HIGH) {
+                enviarSeñal();
+                }
+                if (digitalRead(bootton_1) == HIGH) {
+                enviarSeñal();
+                }
+                if (digitalRead(bootton_2) == HIGH) {
+                y++;
+                }
+                }
+                }</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <p>
+            <h5>Retroalimentación de la experta: </h5> El producto parece tener una muy buena eficiencia, sin embargo existe la posibilidad de que el usuario active la alarma de pánico de manera accidental e incluso no darse cuenta después de ello,
+            les recomiendo poner un botón, o una serie de combinaciones con los botones que ya se tiene, para poder apagar la alarma y que a su vez esta emita un sonido medianamente fuerte o una vibración para que el usuario esté consciente de que
+            este ha sido activado. Esto evitando molestias y a su vez inconvenientes con las autoridades a causa de este dispositivo.
+          </p>
+          <p>
+            <h5>Retroalimentación de usuario: </h5>El aparato se ve muy confiable, me parece muy interesante, a un precio accesible estaría dispuesto a adquirir uno e incluso recomendarlo ¿Cuáles serán las medidas exactas del dispositivo? Tengo el
+            pendiente de que este se me pueda perder
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="parallax-container valign-wrapper">
     <div class="parallax"><img src="https://i.ytimg.com/vi/ZzXGgo1y8Hg/maxresdefault.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
     <div class="section">
       <div id="p">
-      <center><h4>Persona </center></h4>
-      <div class="row">
-      <div class="column"><p><img src="data:image/jpeg;base64,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" style="max-width:100%;height:auto;">
+        <center>
+          <h4>Persona
+        </center>
+        </h4>
+        <div class="row">
+          <div class="column">
+            <p><img src="data:image/jpeg;base64,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"
+                style="max-width:100%;height:auto;">
               <p></p>
               Edad: 19
               <p></p>
@@ -691,87 +774,106 @@ Jornalist at Milenio newspaper </p>
               <p></p>
               Ubicación: Guadalajara, Jalisco
               <p></p>
-              Personalidad: Mente abierta</p></div>
-      <div class="column"><p>  <img src="https://imageshack.com/a/img924/551/QXzjox.jpg" style="max-width:100%;height:auto;">
-                          <p></p>
-                          Gerardo vive en Culiacán, Sinaloa.
-                                      <p></p>
-                         Actualmente estudia Licenciatura en Psicología clínica en la Universidad Autónoma de Sinaloa, Gerardo Sillas frecuenta mucho el transporte público en horas tardías de la noche causado por su horario nocturno en su institución y su disponibilidad económica.</p></div>
-      <div class="column"><p><p></p>
-          Sillas tiene que tomar sus precauciones al tomar el transporte público de debida manera para evitar correr riesgos y/o minimizarlos.
-          <img src="https://imageshack.com/a/img922/1592/wB2lrS.jpg" style="max-width:100%;height:auto;">
+              Personalidad: Mente abierta
+            </p>
+          </div>
+          <div class="column">
+            <p> <img src="https://imageshack.com/a/img924/551/QXzjox.jpg" style="max-width:100%;height:auto;">
+              <p></p>
+              Gerardo vive en Culiacán, Sinaloa.
+              <p></p>
+              Actualmente estudia Licenciatura en Psicología clínica en la Universidad Autónoma de Sinaloa, Gerardo Sillas frecuenta mucho el transporte público en horas tardías de la noche causado por su horario nocturno en su institución y su
+              disponibilidad económica.
+            </p>
+          </div>
+          <div class="column">
+            <p>
+              <p></p>
+              Sillas tiene que tomar sus precauciones al tomar el transporte público de debida manera para evitar correr riesgos y/o minimizarlos.
+              <img src="https://imageshack.com/a/img922/1592/wB2lrS.jpg" style="max-width:100%;height:auto;">
           </div>
           <p></p>
+          <p class="title">
+            Rede social más utilizadas
+          </p>
 
-<p class="title">
+          <div style="margin: 24px 0;">
+            <a href=""><i class="fa fa-twitter"></i></a>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-          Rede social más utilizadas </p>
-
-  	<div style="margin: 24px 0;">
-      <a href=""><i class="fa fa-twitter"></i></a>
-   </div></p></div>
-    </div>
-    </div>
-    </div>
-    </div>
-
+  <center>
+    <a href="https://docs.google.com/document/d/1bbH_aihW6cxjBKf4farghugiOjJAZWcMqzkXFf2OCXU/edit?usp=sharing"><h4> Haz click aqui para ver el reporte</h4> </a>
+  </center>
+  <br>
+  <br>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="index.js"></script>
   <script src="init.js"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127766128-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127766128-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-127766128-1');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127766128-1');
+  </script>
 
 
   <script>
-  var slideIndex = 1;
-showSlides(slideIndex);
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-// Increments the delay on each item.
-$('.rolldown-list li').each(function () {
-  var delay = ($(this).index() / 4) + 's';
-  $(this).css({
-    webkitAnimationDelay: delay,
-    mozAnimationDelay: delay,
-    animationDelay: delay
-  });
-});
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+    // Increments the delay on each item.
+    $('.rolldown-list li').each(function() {
+      var delay = ($(this).index() / 4) + 's';
+      $(this).css({
+        webkitAnimationDelay: delay,
+        mozAnimationDelay: delay,
+        animationDelay: delay
+      });
+    });
 
-$('#btnReload').click(function () {
-  $('#myList').removeClass('rolldown-list');
-  setTimeout(function () {
-    $('#myList').addClass('rolldown-list');
-  }, 1);
-});
-</script>
-
-  </body>
+    $('#btnReload').click(function() {
+      $('#myList').removeClass('rolldown-list');
+      setTimeout(function() {
+        $('#myList').addClass('rolldown-list');
+      }, 1);
+    });
+  </script>
+</body>
 </html>

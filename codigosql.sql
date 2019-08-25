@@ -87,3 +87,34 @@ insert into encontrados (1,'edgar','manuel','perez',180,null,02-02-2019,'calle s
 ,'A','A','A','A','A');
 
 
+
+create or replace trigger comparacion
+    before insert on encotrados
+for each row
+declare
+    equis date;
+    disp number;
+    variable1 varchar2(20);
+    variable2 varchar2(20);
+    variable3 varchar2(20);
+    variable4 varchar2(20);
+    variable5 varchar2(20);
+    variable6 varchar2(20);
+    variable7 varchar2(20);
+begin
+    select desaparecidoid into variable1 from desaparecidos d
+where 
+    d.nombre= :new.nombre
+    and d.nombre2 = :new.nombre2
+    and d.edad = :new.edad
+    and d.estatura = :new.estatura
+    and d.colorPelo = :new colorPelo
+    and d.colorojos = :new colorojos
+    and d.colorpiel = :new colorpiel;
+
+    if variable1 is not null then
+	insert into coincidencias
+	values(variable1,:new.encontradoid);
+end;
+
+

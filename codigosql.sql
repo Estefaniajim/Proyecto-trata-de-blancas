@@ -80,4 +80,10 @@ usuarioId varchar(30) PRIMARY KEY,
 contraseña varchar(30) NOT NULL
 );
 
+insert into desaparecidos (1,'edgar','manuel','perez',180,'especiales',02-02-2019
+,'A','A','A','A','A',null);
+
+insert into encontrados (1,'edgar','manuel','perez',180,null,02-02-2019,'calle san jacinto'
+,'A','A','A','A','A');
+
 

@@ -79,3 +79,5 @@ create table usuarios (
 usuarioId varchar(30) PRIMARY KEY,
 contraseña varchar(30) NOT NULL
 );
+
+
